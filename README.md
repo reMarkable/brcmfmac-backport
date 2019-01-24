@@ -16,14 +16,6 @@ Description
 This is Cypress's Linux brcmfmac driver and firmware support package.
 Brcmfmac is an open-source driver project.
 
-Files in this release:
-* Backports package (cypress-backports-v4.14.52-2018_0928-module-src.tar.gz)
-* Firmware/clm_blob files (cypress-firmware-v4.14.52-2018_0928.tar.gz)
-* Cypress fmac patch files (cypress-patch-v4.14.52-2018_0928.tar.gz)
-* Device tree files (cypress-devicetree-2018_0928.tar.gz)
-* hostapd/wpa_supplicant patch (cypress-hostap_2_6-2018_0928.tar.gz)
-* README
-
 For more information about the Linux brcmfmac project, see:
 
 [brcm80211 Wireless Wiki](https://wireless.wiki.kernel.org/en/users/drivers/brcm80211)
@@ -54,23 +46,6 @@ Test Environment
 * x86
    * Linux v4.12
    * backports
-
-
-Firmware Versions
------------------
-| Chip      | FW Version    |
-|-----------|---------------|
-| 43455     | 7.45.173      |
-| 4343W     | 7.45.98.65    |
-| 4356-pcie | 7.35.180.190  |
-| 4356-sdio | 7.35.349.62   |
-| 4354      | 7.35.349.62   |
-| 4339      | 6.37.39.92    |
-| 43340     | 6.10.190.72   |
-| 43362     | 5.90.247      |
-| 89342     | 9.40.97       |
-| 89359     | 9.40.94.1     |
-| 43012     | 13.10.271.138 |
 
 
 Instructions
@@ -306,89 +281,6 @@ FMAC Driver Patch List
 
 Note: [*] is the upstream tag containing the patch
       [x] means no plan to upstream
-
-
-Firmware Changes
-----------------
-* 43455
-   * --- 7.45.173 ---
-   * WPA3-personal support
-   * Firmware crash fix
-   * Low Tx duty cycle support
-   * SoftAP association fix
-   * WIFI-BT coex throughput improvement
-   * MFP bug fix
-   * Roam time enhancement
-   * --- 7.45.165 ---
-
-* 4343W
-   * --- 7.45.98.65 ---
-   * Firmware crash fix
-   * wowlpf feature enabled 
-   * Excessive current consumption fix together operation of WLAN/BT
-   * Various throughput fixes
-   * --- 7.45.98.52 ---
-
-* 4356-pcie
-   * --- 7.35.180.190 ---
-   * Firmware crash fix
-   * MFP bug fix
-   * --- 7.35.180.187 ---
-
-* 4356-sdio
-   * --- 7.35.349.62 ---
-
-* 4354
-   * --- 7.35.349.62 ---
-   * Enable amsdu RX
-   * RSSI computation fix
-   * WIFI-BT coex throughput improvement
-   * Firmware crash fix
-   * --- 7.35.349.49 ---
-
-* 4339
-   * --- 6.37.39.92 ---
-
-* 43340
-   * --- 6.10.190.72 ---
-
-* 43362
-   * --- 5.90.247 ---
-   * Firmware crash fix
-   * --- 5.90.244 ---
-
-* 89342
-   * --- 9.40.97 ---
-   * Throughput issue fix
-   * AP/STA connection/ping fix
-   * Fast roaming security fix
-   * Firmware crash fix
-   * Low Tx duty cycle support
-   * RSDB extended IE fix
-   * WFA 11n/11ac certification fix
-   * WPS fix
-   * --- 9.40.87 ---
-
-* 89359
-   * --- 9.40.94.1 ---
-
-* 43012
-   * --- 13.10.271.138 ---
-   * WPA3 Personal support for 43012
-   * Firmware crash fix
-   * WOWLPF feature enabled
-   * Qualified EXT GPIO for link loss
-   * Qualified beacon loss, deauth, disassoc, net pattern with/without supplicant
-   * Qualified GTKOE using both internal/external supplicant
-   * Qualified ARP and DHCP lease time renewal offload
-   * Added GO+STA VSDB Support
-   * Added updated algorithm for beacon window
-   * Added BT to WLAN wake up programming
-   * Added SWDIV Enhanced by Beacon Aligned swapping
-   * Updated FCREF/WLCSP nvram settings for TX board limits based on PVT results
-   * Added Service DurationFix(StartFlex) request when a both_flex request is already scheduled in the current timeslot
-   * Multiple Current Optimizations
-   * --- 13.10.271.107 ---
 
 
 Known Issues
