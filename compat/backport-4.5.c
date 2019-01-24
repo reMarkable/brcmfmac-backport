@@ -126,7 +126,6 @@ EXPORT_SYMBOL_GPL(phy_attached_print);
 
 static void devm_led_trigger_release(struct device *dev, void *res)
 {
-#warn "FIXME: instead fix version to make sure it builds the right compat file"
 	//led_trigger_unregister(*(struct led_trigger **)res);
 }
 
