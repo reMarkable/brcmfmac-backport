@@ -126,7 +126,8 @@ EXPORT_SYMBOL_GPL(phy_attached_print);
 
 static void devm_led_trigger_release(struct device *dev, void *res)
 {
-	led_trigger_unregister(*(struct led_trigger **)res);
+#warn "FIXME: instead fix version to make sure it builds the right compat file"
+	//led_trigger_unregister(*(struct led_trigger **)res);
 }
 
 int devm_led_trigger_register(struct device *dev,
@@ -135,19 +136,21 @@ int devm_led_trigger_register(struct device *dev,
 	struct led_trigger **dr;
 	int rc;
 
-	dr = devres_alloc(devm_led_trigger_release, sizeof(*dr),
-			  GFP_KERNEL);
-	if (!dr)
-		return -ENOMEM;
+	return -ENOTSUPP;
 
-	*dr = trig;
-
-	rc = led_trigger_register(trig);
-	if (rc)
-		devres_free(dr);
-	else
-		devres_add(dev, dr);
-
-	return rc;
+//	dr = devres_alloc(devm_led_trigger_release, sizeof(*dr),
+//			  GFP_KERNEL);
+//	if (!dr)
+//		return -ENOMEM;
+//
+//	*dr = trig;
+//
+//	rc = led_trigger_register(trig);
+//	if (rc)
+//		devres_free(dr);
+//	else
+//		devres_add(dev, dr);
+//
+//	return rc;
 }
 EXPORT_SYMBOL_GPL(devm_led_trigger_register);
